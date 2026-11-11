@@ -35,7 +35,7 @@ if (!$klassekode) {
   $resultat = mysqli_query($db,$sjekkstudenter);
   $rad = mysqli_fetch_array($resultat);
 
-  if ($rad['antal']>0) {
+  if ($rad['antall']>0) {
     die ("kan ikke slette klasse med studenter registrert");
   }
 
