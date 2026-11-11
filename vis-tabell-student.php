@@ -20,7 +20,7 @@
 
 include("db-tilkobling.php");
 
-$sqlSetning="SELECT * FROM klasse;";
+$sqlSetning="SELECT * FROM student;";
 $sqlResultat=mysqli_query($db,$sqlSetning) or die ("ikke mulig &aring; hente data fra databasen");
 $antallRader=mysqli_num_rows($sqlResultat);
 
@@ -33,8 +33,6 @@ for ($r=1;$r<=$antallRader;$r++)
     $rad=mysqli_fetch_array($sqlResultat);
     $brukernavn=$rad[0];
     $fornavn=$rad[1];
-    $etternavn=$rad[2];
-    $klassekode=$rad[3];
 
     print ("<tr> <td>$brukernavn</td> <td>$fornavn</td> <td>$etternavn</td> <td>$klassekode</td> </tr>");
   }
