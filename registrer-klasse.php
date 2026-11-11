@@ -48,7 +48,7 @@ if ($antallRader!=0)
 
   else 
     {
-      $sqlSetning="INSERT INTO klasse (klassekode, klassenavn, studiumkode) VALUES ('$klassekode', '$klassenavn, '$studiumkode ');";
+      $sqlSetning="INSERT INTO klasse (klassekode, klassenavn, studiumkode) VALUES ('$klassekode', '$klassenavn', '$studiumkode');";
       $sqlResultat=mysqli_query($db,$sqlSetning) or die ("ikke mulig &aring; registrere data i databasen");
       if ($sqlResultat) {
         print ("klassen $klassekode, $klassenavn og $studiumkode er registrert");
