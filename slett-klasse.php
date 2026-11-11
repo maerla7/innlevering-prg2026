@@ -36,7 +36,7 @@ if (!$klassekode) {
   $rad = mysqli_fetch_array($resultat);
 
   if ($rad['antall']>0) {
-    die ("kan ikke slette klasse med studenter registrert");
+    die ("Kan ikke slette klasse med studenter registrert");
   }
 
     $sqlSetning="DELETE FROM klasse WHERE klassekode='$klassekode'";

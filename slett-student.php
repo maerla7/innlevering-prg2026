@@ -2,39 +2,39 @@
 
 
 
-  <title>Slett klasse</title>
+  <title>Slett student</title>
   
 
-  <h1>Slett klasse</h1>
+  <h1>Slett student</h1>
 
-  <p>Velg en klasse du &oslash;nsker &aring; slette</p>
+  <p>Velg en student du &oslash;nsker &aring; slette</p>
 
-  <form method="post" action="" id="slettklasse" name="slettklasse">
+  <form method="post" action="" id="slettstudent" name="slettstudent">
 
-  <select name="klassekode" id="klassekode">
-    <option value="">Velg klasse</option>
-    <?php include("dynamiske-funksjoner.php"); listeboksklasse(); ?>
+  <select name="brukernavn" id="brukernavn">
+    <option value="">Velg student</option>
+    <?php include("dynamiske-funksjoner.php"); listeboksstudent(); ?>
   </select> <br/>
-  <input type="submit" value="Slett klasse" name="slettklasseknapp" id="slettklasseknapp">
+  <input type="submit" value="Slett student" name="slettstudentknapp" id="slettstudentknapp">
 
   </form>
 
 
 <?php
 
-if (isset($_POST ["slettklasseknapp"]))
+if (isset($_POST ["slettstudentknapp"]))
   {
-    $klassekode=$_POST ["klassekode"];
-if (!$klassekode) {
-  die("venligst velg en klasse");
+    $brukernavn=$_POST ["brukernavn"];
+if (!$brukernavn) {
+  die("venligst velg en student");
 }
     include("db-tilkobling.php");
   
 
-    $sqlSetning="DELETE FROM klasse WHERE klassekode='$klassekode'";
+    $sqlSetning="DELETE FROM student WHERE brukernavn='$brukernavn'";
     mysqli_query($db,$sqlSetning) or die ("ikke mulig &aring; slette data i databasen");
 
-    print ("F&oslash;lgende klasse er slettet: $klassekode");
+    print ("F&oslash;lgende student er slettet: $brukernavn");
   
     }
 
