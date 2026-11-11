@@ -1,3 +1,4 @@
+
 <script src="funksjoner.js"> </script>
 
 
@@ -19,6 +20,7 @@
 
   </form>
 
+<script src="funksjoner.js"> </script>
 
 <?php
 
