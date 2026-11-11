@@ -48,47 +48,18 @@ if ($antallRader!=0)
 
   else 
     {
-      $sqlSetning="INSERT INTO klasse VALUES ('$klassekode'); ";
+      $sqlSetning="INSERT INTO klasse (klassekode, klassenavn, studiumkode) VALUES ('$klassekode', '$klassenavn, '$studiumkode'');";
       mysqli_query($db,$sqlSetning) or die ("ikke mulig &aring; registrere data i databasen");
-
-      print ("N&aring er klassekode $klassekode registrert");
-    }
-
-  $sqlSetning="SELECT * FROM klasse WHERE klassenavn='$klassenavn';";
-  $sqlResultat=mysqli_query($db,$sqlSetning) or die ("ikke mulig &aring; hente data fra databasen");
-  $antallRader=mysqli_num_rows($sqlResultat);
-
-  if ($antallRader!=0)
-    {
-      print ("Klassenavn er registrert fra f&oslashr");
-
-    }
-
-    else 
-      {
-        $sqlSetning="INSERT INTO klasse VALUES('$klassenavn');";
-        mysqli_query($db,$sqlSetning) or die ("ikke mulig &aring; registrere data i databasen");
-
-        print ("n&aring er klassenavn $klassenavn registrert");
+      if ($sqlResultat) {
+        print ("klassen $klassekode, $klassenavn og $studiumkode er registrert");
       }
 
-  $sqlSetning="SELECT * FROM klasse WHERE studiumkode='$studiumkode';";
-  $sqlResultat=mysqli_query($db,$sqlSetning) or die ("ikke mulig &aring; hente data fra databasen");
-  $antallRader=mysqli_num_rows($sqlResultat);
-
-  if ($antallRader!=0)
-    {
-      print ("Studiumkode er registrert fra f&oslashr");
+      else 
+        {
+          print ("Klassen er ikke registrert");
+        }
 
     }
-
-    else 
-      {
-        $sqlSetning="INSERT INTO klasse VALUES('$studiumkode');";
-        mysqli_query($db,$sqlSetning) or die ("ikke mulig &aring; registrere data i databasen");
-
-        print ("n&aring er studiumkode $studiumkode registrert");
-      }
 
   }
 
