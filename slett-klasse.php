@@ -31,10 +31,17 @@ if (!$klassekode) {
 }
     include("db-tilkobling.php");
 
+if ($row['antall'] > 0)
+  {
+    print ("Kan ikke slette $klassekode fordi den har studenter registrert");
+  }
+  else {
+
     $sqlSetning="DELETE FROM klasse WHERE klassekode='$klassekode'";
     mysqli_query($db,$sqlSetning) or die ("ikke mulig &aring; slette data i databasen");
 
     print ("F&oslash;lgende klasse er slettet: $klassekode");
   }
+    }
 
 ?>
