@@ -16,14 +16,14 @@
     <option value="">Velg klasse</option>
     <?php include("dynamiske-funksjoner.php"); listeboksklasse(); ?>
   </select> <br/>
-  <input type="submit" value="Slett klasse" name="slettklasse" id="slettklasse">
+  <input type="submit" value="Slett klasse" name="slettklasseknapp" id="slettklasseknapp">
 
   </form>
 
 
 <?php
 
-if (isset($_POST ["slettklasse"]))
+if (isset($_POST ["slettklasseknapp"]))
   {
     $klassekode=$_POST ["klassekode"];
 
