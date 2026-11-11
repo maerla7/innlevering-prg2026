@@ -31,7 +31,7 @@ if (!$klassekode) {
 }
     include("db-tilkobling.php");
 
-    $sqlSetning="DELETE FROM klasse WHERE klassekode='$klassekode';";
+    $sqlSetning="DELETE FROM klasse WHERE klassekode='$klassekode'";
     mysqli_query($db,$sqlSetning) or die ("ikke mulig &aring; slette data i databasen");
 
     print ("F&oslash;lgende klasse er slettet: $klassekode");
