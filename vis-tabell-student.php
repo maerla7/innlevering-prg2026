@@ -30,7 +30,7 @@ print ("<tr> <th align=left>brukernavn</th> <th align=left>fornavn</th> <th alig
 
 for ($r=1;$r<=$antallRader;$r++)
   {
-    $rad=mysqli_fetch_array($sqliResultat);
+    $rad=mysqli_fetch_array($sqlResultat);
     $brukernavn=$rad[0];
     $fornavn=$rad[1];
     $etternavn=$rad[2];
