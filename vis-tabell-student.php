@@ -33,6 +33,8 @@ for ($r=1;$r<=$antallRader;$r++)
     $rad=mysqli_fetch_array($sqlResultat);
     $brukernavn=$rad[0];
     $fornavn=$rad[1];
+    $etternavn=$rad[2];
+    $klassekode=$rad[3];
 
     print ("<tr> <td>$brukernavn</td> <td>$fornavn</td> <td>$etternavn</td> <td>$klassekode</td> </tr>");
   }
