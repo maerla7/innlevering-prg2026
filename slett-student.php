@@ -10,17 +10,16 @@
 
   <p>Velg en student du &oslash;nsker &aring; slette</p>
 
-  <form method="post" action="" id="slettstudent" name="slettstudent">
+  <form method="post" action="" id="slettstudent" name="slettstudent" onclick="return brekreft()">
 
   <select name="brukernavn" id="brukernavn">
     <option value="">Velg student</option>
     <?php include("dynamiske-funksjoner.php"); listeboksstudent(); ?>
   </select> <br/>
   <input type="submit" value="Slett student" name="slettstudentknapp" id="slettstudentknapp">
+  
+</form>
 
-  </form>
-
-<script src="funksjoner.js"> </script>
 
 <?php
 
