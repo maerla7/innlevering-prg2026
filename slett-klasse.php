@@ -3,7 +3,7 @@
 
 
 
-    <title>Slett klasse</title>
+  <title>Slett klasse</title>
   
 
   <h1>Slett klasse</h1>
@@ -26,7 +26,9 @@
 if (isset($_POST ["slettklasseknapp"]))
   {
     $klassekode=$_POST ["klassekode"];
-
+if (!$klassekode) {
+  die("vensligst velg en klasse");
+}
     include("db-tilkobling.php");
 
     $sqlSetning="DELETE FROM klasse WHERE klassekode='$klassekode';";
