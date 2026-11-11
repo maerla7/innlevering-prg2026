@@ -12,7 +12,7 @@
 
   <form method="post" action="" id="slettklasse" name="slettklasse">
 
-  <select name="klasskode" id="klassekode">
+  <select name="klassekode" id="klassekode">
     <option value="">Velg klasse</option>
     <?php include("dynamiske-funksjoner.php"); listeboksklasse(); ?>
   </select> <br/>
@@ -27,7 +27,7 @@ if (isset($_POST ["slettklasseknapp"]))
   {
     $klassekode=$_POST ["klassekode"];
 if (!$klassekode) {
-  die("vensligst velg en klasse");
+  die("venligst velg en klasse");
 }
     include("db-tilkobling.php");
 
