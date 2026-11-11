@@ -16,7 +16,7 @@
     <option value="">Velg student</option>
     <?php include("dynamiske-funksjoner.php"); listeboksstudent(); ?>
   </select> <br/>
-  <input type="submit" value="Slett student" name="slettstudentknapp" id="slettstudentknapp" onclick="return brekreft()">
+  <input type="submit" value="Slett student" name="slettstudentknapp" id="slettstudentknapp" onclick="return bekreft()">
   
 </form>
 
