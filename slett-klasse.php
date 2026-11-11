@@ -10,13 +10,13 @@
 
   <p>Velg en klasse du &oslash;nsker &aring; slette</p>
 
-  <form method="post" action="" id="slett-klasse" name="slett-klasse">
+  <form method="post" action="" id="slettklasse" name="slettklasse">
 
   <select name="klasskode" id="klassekode">
     <option value="">Velg klasse</option>
     <?php include("dynamiske-funksjoner.php"); listeboksklasse(); ?>
   </select> <br/>
-  <input type="submit" value="Slett klasse" id="slettklasse">
+  <input type="submit" value="Slett klasse" name="slettklasse" id="slettklasse">
 
   </form>
 
