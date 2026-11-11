@@ -31,7 +31,7 @@ if (!$klassekode) {
 }
     include("db-tilkobling.php");
 
-if ($row > 0)
+if ($rad > 0)
   {
     print ("Kan ikke slette $klassekode fordi den har studenter registrert");
   }
