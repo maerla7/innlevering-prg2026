@@ -10,9 +10,13 @@
     id="registrer-klasse"
     name="registrer-klasse" >
 
-    Skriv inn klasekode, klassenavn og studiumkode for &aring: registrere klasse: <br/>>
+    Klassekode: <br/>
       <input type="text" id="klassekode" name="klassekode"/> <br/>
+
+      Klassenavn: <br/>
       <input type="text" id="klassenavn" name="klassenavn" /> <br/>
+
+      Studiumkode: <br/>
       <input type="text" id="studiumkode" name="studiumkode" /> <br/>
 
     <input type="submit" value="Submit" id="submit" name="submit"/>
@@ -22,3 +26,25 @@
     </form>
   </body>
 </html>
+
+<?php
+
+if (isset($_POST ["submit"]))
+  {
+    $klassekode=$_POST ["klassekode"];
+    $klassenavn=$_POST ["klassenavn"];
+    $studiumkode=$_POST ["studiumkode"];
+
+    include "db-tilkobling.php";
+
+
+
+  }
+
+
+
+
+
+
+
+?>
