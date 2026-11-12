@@ -27,6 +27,7 @@
 
     <?php include ("dynamiske-funksjoner.php"); hentKlasser();?>  
     </select>
+    <br/>
 
     <input type="submit" value="Submit" id="submit" name="submit"/>
     <br/>
