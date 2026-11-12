@@ -43,7 +43,7 @@ function listeboksstudent()
 }
 
 function hentKlasser() {
-    include 'db-kobling.php';
+    include ("db-kobling.php");
     $sqlsetning = "SELECT * FROM klasse ORDER BY klassekode";
     $sqlresultat = mysqli_query($db, $sqlsetning) or die ("ikke mulig å hente klasser");
     $antallRader = mysqli_num_rows($sqlresultat);
