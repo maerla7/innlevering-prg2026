@@ -41,4 +41,19 @@ function listeboksstudent()
       print("<option value='$brukernavn'>$brukernavn $fornavn $etternavn $klassekode </option>");  /* ny verdi i listeboksen laget */
     }
 }
+
+function hentKlasser() {
+    include 'db-kobling.php';
+    $sqlsetning = "SELECT * FROM klasse ORDER BY klassekode";
+    $sqlresultat = mysqli_query($db, $sqlsetning) or die ("ikke mulig å hente klasser");
+    $antallRader = mysqli_num_rows($sqlresultat);
+    for ($r=1;$r<=$antallRader;$r++) {
+        $rad = mysqli_fetch_array($sqlresultat);
+        $klassekode = $rad["klassekode"];
+        $klassenavn = $rad["klassenavn"];
+        $studiumkode = $rad["studiumkode"];
+        print ("<option value='$klassekode'>$klassekode $klassenavn $studiumkode</option>");
+    }
+}
+
 ?>

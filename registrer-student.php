@@ -19,8 +19,14 @@
       Etternavn: <br/>
       <input type="text" id="etternavn" name="etternavn" /> <br/>
 
+      Velg klasse for studenten: <br/>
       Klassekode: <br/>
-      <input type="text" id="klassekode" name="klassekode" /> <br/>
+      <select name="klassekode" id="klassekode">
+
+      <option value="">Klasse</option><br/>
+
+    <?php include ("dynamiske-funksjoner.php"); hentKlasser();?>  
+    </select>
 
     <input type="submit" value="Submit" id="submit" name="submit"/>
     <br/>
